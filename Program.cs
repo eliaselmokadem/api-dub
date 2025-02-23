@@ -1,3 +1,12 @@
+using MongoDB.Driver;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
+using Microsoft.Extensions.Hosting;
+using Microsoft.Extensions.Configuration;
+using Microsoft.Extensions.DependencyInjection;
+using Microsoft.AspNetCore.Builder;
 
 namespace api_personalsite
 {
@@ -13,6 +22,9 @@ namespace api_personalsite
             // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
             builder.Services.AddEndpointsApiExplorer();
             builder.Services.AddSwaggerGen();
+            builder.Services.Configure<MongoDbSettings>(
+    builder.Configuration.GetSection("MongoDB"));
+            builder.Services.AddSingleton<MongoDbService>();
 
             var app = builder.Build();
 

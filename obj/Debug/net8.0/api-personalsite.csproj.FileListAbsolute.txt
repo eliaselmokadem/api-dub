@@ -30,3 +30,10 @@ D:\projects\apis\api-personalsite\api-personalsite\obj\Debug\net8.0\refint\api-p
 D:\projects\apis\api-personalsite\api-personalsite\obj\Debug\net8.0\api-personalsite.pdb
 D:\projects\apis\api-personalsite\api-personalsite\obj\Debug\net8.0\api-personalsite.genruntimeconfig.cache
 D:\projects\apis\api-personalsite\api-personalsite\obj\Debug\net8.0\ref\api-personalsite.dll
+D:\projects\apis\api-personalsite\api-personalsite\obj\Debug\net8.0\api-personalsite.sourcelink.json
+D:\projects\apis\api-personalsite\api-personalsite\bin\Debug\net8.0\DnsClient.dll
+D:\projects\apis\api-personalsite\api-personalsite\bin\Debug\net8.0\MongoDB.Bson.dll
+D:\projects\apis\api-personalsite\api-personalsite\bin\Debug\net8.0\MongoDB.Driver.dll
+D:\projects\apis\api-personalsite\api-personalsite\bin\Debug\net8.0\SharpCompress.dll
+D:\projects\apis\api-personalsite\api-personalsite\bin\Debug\net8.0\Snappier.dll
+D:\projects\apis\api-personalsite\api-personalsite\bin\Debug\net8.0\ZstdSharp.dll
