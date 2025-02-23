@@ -8,7 +8,7 @@ public class MessageController : ControllerBase
     [HttpGet]
     public IActionResult SendMessageByMail()
     {
-        return Ok("Hello from the GET endpoint!");
+        return Ok("Test a zebbi TESSTTT");
     }
 
     // POST api/message
@@ -16,6 +16,6 @@ public class MessageController : ControllerBase
     public IActionResult PostMessageInDatabase([FromBody] Message message)
     {
         // Here you would typically handle the message, e.g., save it to a database
-        return Ok($"Message received with Content: {message.Content}");
+        return Ok($"Kanker Post werkt: {message.Content}");
     }
 }
