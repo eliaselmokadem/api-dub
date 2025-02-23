@@ -18,7 +18,7 @@ public class UserController : ControllerBase
     public async Task<ActionResult<IEnumerable<Message>>> GetUsers()
     {
         var users = await _userCollection.Find(user => true).ToListAsync();
-        return Ok("test");
+        return Ok(users);
     }
 
     [HttpPost]
