@@ -16,6 +16,13 @@ namespace api_personalsite
         {
             var builder = WebApplication.CreateBuilder(args);
 
+            // Configure Kestrel server options
+            builder.WebHost.ConfigureKestrel(serverOptions =>
+            {
+                serverOptions.Limits.KeepAliveTimeout = TimeSpan.FromMinutes(2);
+                serverOptions.Limits.RequestHeadersTimeout = TimeSpan.FromMinutes(2);
+            });
+
             // Add services to the container.
 
             builder.Services.AddControllers();
