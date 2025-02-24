@@ -23,8 +23,18 @@ namespace api_personalsite
             builder.Services.AddEndpointsApiExplorer();
             builder.Services.AddSwaggerGen();
             builder.Services.Configure<MongoDbSettings>(
-    builder.Configuration.GetSection("MongoDB"));
+            builder.Configuration.GetSection("MongoDB"));
             builder.Services.AddSingleton<MongoDbService>();
+            builder.Services.AddCors(options =>
+            {
+                options.AddPolicy("AllowAll",
+                    builder =>
+                    {
+                        builder.AllowAnyOrigin()
+                               .AllowAnyMethod()
+                               .AllowAnyHeader();
+                    });
+            });
 
             var app = builder.Build();
 
@@ -39,6 +49,7 @@ namespace api_personalsite
 
             app.UseAuthorization();
 
+            app.UseCors("AllowAll");
 
             app.MapControllers();
 
